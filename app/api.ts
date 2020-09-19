@@ -21,7 +21,7 @@ const api = {
         const scores = window.localStorage.getItem("pokeguess:scores");
 
         try {
-          resolve(JSON.parse(scores));
+          resolve(JSON.parse(scores) || []);
         } catch (error) {
           reject(error);
         }
